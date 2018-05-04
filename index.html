@@ -28,6 +28,8 @@
 	href="images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="images/ico/apple-touch-icon-57-precomposed.png">
+<link rel="stylesheet" href="css/blueimp-gallery.min.css">
+
 </head>
 <!--/head-->
 
@@ -56,6 +58,7 @@
 						<!--li><a href="#program">Program</a></li-->
 						<li><a href="#team">OC</a></li>
 						<li><a href="#pc">PC</a></li>
+						<li><a href="#report">Report</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
@@ -470,6 +473,90 @@ Please submit your contributions to <a href="https://easychair.org/conferences/?
 	</section>
 	<!--/#about-us-->
 
+
+
+
+		<section id="report">
+		<div class="container">
+			<div class="box">
+				<div class="center">
+					<h2>Workshop Report</h2>
+
+					</br>
+
+					<p class="lead left-aligned">
+
+
+
+The old paradigm of computing - where machines do something for the humans - has changed: more and more humans and machines are working with and for each other, in a partnership. We can see the effectiveness of this paradigm in many areas, ranging from human computation (where humans do some of the computation in place of the machines), computer-supported cooperative work, social computing, web search, recommender systems, computer-mediated communication, to name a few.
+
+The HumL workshop focused on research questions around the design of web information systems that keep humans in the loop. The three main categories of topics covered in this edition of the workshop were <strong>human factors</strong>, <strong>data collections</strong> and <strong>applications</strong>. 
+
+The paper presentations covered a wide range of topics related to the efficient and effective combination of the strong sides of both machine and crowd computation.  Overall the workshop presented a nicely diverse set of use cases and domains where these topics were studied. Empirical results were provided and discussed with respect to (1) methods for data quality ensurance and labeling task efficiency, (2) the role of gamification elements for improving crowd perfomance as well as the role of quantum mathematics to simulate human behavior. 
+
+
+The workshop was opened in the morning by a very interesting invited talk by Praveen Paritosh from Google Research, talking about the missing science of knowledge curation. Praveen discussed the use of the right incentives to motivate human contribution to the creation of knowledge resources and intruduced three types of data for training purposes: found data, bought data and vested data and argued on the long term value of producing high quality vested data resources.
+
+
+Amrapali Zaveri discussed findings about optimal amount of workers and tasks per worker in a parallelized and decentralized crowdsourcing setting. They introduce a two-staged statistical guideline, CrowdED, for optimal crowdsourcing experimental design in order to \emph{a-priori} estimate optimal worker and task assignments to obtain maximum accuracy on all tasks. 
+
+Anastasia Sofou presented their work on making Cultural Heritage more accessible and reusable. They introduce WITH, an aggregation platform that provides enhanced services and enables human-computer collaboration for data annotations and enrichment. Specifically, the system combines machine intelligence from image and text analysis and human intelligence through gamified crowdsourcing.
+
+Giorgio Maria Di Nunzio described experiments for the classification of newswires and systematic medical reviews, where authors use gamification techniques to transform labelling tasks into an interactive learning process.
+
+Wei Sun presented results of field experiments on 169 television advertisements and 2334 participants, with a dynamic Bayesian network (DBN)-based system assisting human designers produce effective advertisements with predictable outcomes (e.g. linking advertisement content, viewers emotional responses and effectiveness metrics for ad avoidance, sharing and influence on purchase). 
+
+Steve Welch presented their study on the tradeoff for machine learning model performance in terms of batch size of the requested annotation labels and the training time in the domain of real-time domain specific relation extraction.
+
+
+The afternoon session was opened by Elena Simperl from the University of Southampton, who generated lots of interest with her research on how humans and bots contribute together to the development of the Wikidata knowledge graph.
+
+
+Chris Welty outlined a new and more general approach to recognizing context, grounded in a fairly simple intuition: is far more appropriate to model human behavior in human in the loop systems using notions from quantum mechanics, such as superpositions of states.
+
+Maria Teresa Pazienza presented a hybrind human and machine computation framework for ontology learning which combines machine extraction of triples from heterogeneous sources and human validation of these.
+
+Rafael Zequeira discussed the results from a speech quality assessment study in the context of data reliability in crowdsourcing. Specifically, the authors focus on how ``trapping questions'' or ``outlier detection'' assure reliable results, and show that only a combination of both techniques provides quality improvement.
+
+
+<div id="links">
+	<a href="images/pics/elena1.jpg" title="Elena Simperl">
+        <img src="pics/elena1.jpg" alt="Elena Simperl">
+    </a>
+	<a href="images/pics/elena2.jpg" title="Elena Simperl">
+        <img src="pics/elena2.jpg" alt="Elena Simperl">
+    </a>
+	<a href="images/pics/elena3.jpg" title="Elena Simperl">
+        <img src="pics/elena3.jpg" alt="Elena Simperl">
+    </a>
+    <a href="images/pics/giorgio1.jpg" title="Giorgio Maria Di Nunzio">
+        <img src="pics/giorgio1.jpg" alt="Giorgio Maria Di Nunzio">
+    </a>
+    <a href="images/pics/giorgio2.jpg" title="Giorgio Maria Di Nunzio">
+        <img src="pics/giorgio2.jpg" alt="Giorgio Maria Di Nunzio">
+    </a>
+</div>
+
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+
+					</p>
+
+				</div>
+				<!--/.center-->
+			</div>
+		</div>
+	</section>
+
+
+
 	<section id="contact">
 		<div class="container">
 			<div class="box last">
@@ -559,5 +646,16 @@ Please submit your contributions to <a href="https://easychair.org/conferences/?
 	<script src="js/jquery.isotope.min.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/blueimp-gallery.min.js"></script>
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
 </body>
 </html>
